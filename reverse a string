@@ -4,10 +4,75 @@ def reverse(s):
     for i in s:
         str = i + str
     return str
-s = "PrepBytes"
+s = "GeeksforGeeks"
 print("The original string is : ", end="")
 print(s)
 print("The reversed string After using loops is : ", end="")
 print(reverse(s))
 
 
+JAVA PROGRAM TO REVERSE A STRING
+// Java program to ReverseString using ByteArray.
+import java.lang.*;
+import java.io.*;
+import java.util.*;
+class ReverseString {
+	public static void main(String[] args)
+	{
+		String input = "GeeksforGeeks";
+
+		byte[] strAsByteArray = input.getBytes();
+
+		byte[] result = new byte[strAsByteArray.length];
+
+		for (int i = 0; i < strAsByteArray.length; i++)
+			result[i] = strAsByteArray[strAsByteArray.length - i - 1];
+
+		System.out.println(new String(result));
+	}
+}
+
+
+C PROGRAM TO REVERSE A STRING
+#include <stdio.h>  
+#include <string.h>  
+int main()  
+{  
+char str1[50], temp;  
+int i = 0, j =0;  
+printf (" Enter a string to be reversed: ");  
+scanf( "%s", str1);  
+j = strlen (str1) - 1;  
+while ( i < j)   
+{    
+temp = str1[j];  
+str1[j] = str1[i];  
+str1[i] = temp;  
+i++; 
+j--; 
+}  
+printf (" The reversed of the string: %s", str1);  
+return 0;  
+} 
+
+
+C++ PROGRAM TO REVERSE A STRING
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void reverse(string str)
+{
+	int len = str.length();
+	int n = len;
+	while(n--)
+		cout << str[n];
+}
+
+int main(void)
+{
+	string s = "GeeksforGeeks";
+
+	reverse(s);
+	return (0);
+}
