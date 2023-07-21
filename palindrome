@@ -1,4 +1,4 @@
-PROGRAM FOR PALINDROME IN PYHTON
+PROGRAM FOR PALINDROME IN PYTHON
 num=int(input("Enter a number:"))
 temp=num
 rev=0
